@@ -16,52 +16,65 @@ Adding reactive to string templates engine.
 
 Подстановка без фильтрации
 ```
-<%= anyObject.justHtml('anyValue') %>```
+<%= anyObject.justHtml('anyValue') %>
+```
 
 Подстановка без фильтрации но с колбеком
 ```
-<%= anyObject.justHtml('anyValue', function(v){return (v+"").replace("a", "D") }) %>```
+<%= anyObject.justHtml('anyValue', function(v){return (v+"").replace("a", "D") }) %>
+```
 
 Подстановка без фильтрации но с колбеком и дополнительными данными передаваемыми в колбек
 ```
-<%= anyObject.justHtml('anyValue', function(v, custom_data){return (v+"").replace("a", "D") }, {custom:'data'}) %>```
+<%= anyObject.justHtml('anyValue', function(v, custom_data){return (v+"").replace("a", "D") }, {custom:'data'}) %>
+```
 
 Подстановка текста 
 ```
-<%= anyObject.justText('host_url') %>```
+<%= anyObject.justText('host_url') %>
+```
 
 Подстановка текста с колбеком
 ```
-<%= anyObject.justText('anyValue', function(v){return (v+"").replace("a", "G") }) %>```
+<%= anyObject.justText('anyValue', function(v){return (v+"").replace("a", "G") }) %>
+```
 
 Подстановка текста с колбеком и дополнительными данными передаваемыми в колбек
 ```
-<%= anyObject.justText('anyValue', function(v, custom_data){return (v+"").replace("a", "G") }, {custom:'data'}) %>```
+<%= anyObject.justText('anyValue', function(v, custom_data){return (v+"").replace("a", "G") }, {custom:'data'}) %>
+```
 
 Подстановка класса если знаение не false
 ```
-<h1 class="<%= anyObject.justClass('anyValue', 'anyClassName') %> " >Any text</h1>```
+<h1 class="<%= anyObject.justClass('anyValue', 'anyClassName') %> " >Any text</h1>
+```
 
 Подстановка класса если клбек вернул не false
 ```
-<h1 class="<%= anyObject.justClass('anyValue', 'anyClassName', function(v, custom_data){return v && custom_data }, {custom:'data'}) %> " >Any text</h1>```
+<h1 class="<%= anyObject.justClass('anyValue', 'anyClassName', function(v, custom_data){return v && custom_data }, {custom:'data'}) %> " >Any text</h1>
+```
 
 Подстановка класса если знаение false
 ```
-<h1 class="<%= anyObject.justNotClass('anyValue', 'anyClassName') %> " >Any text</h1>```
+<h1 class="<%= anyObject.justNotClass('anyValue', 'anyClassName') %> " >Any text</h1>
+```
 
 Подстановка класса если клбек вернул false
 ```
-<h1 class="<%= anyObject.justNotClass('anyValue', 'anyClassName', function(v, custom_data){return v && custom_data }, {custom:'data'}) %> " >Any text</h1>```
+<h1 class="<%= anyObject.justNotClass('anyValue', 'anyClassName', function(v, custom_data){return v && custom_data }, {custom:'data'}) %> " >Any text</h1>
+```
 
 Подстановка атрибута 
 ```
-<h1 <%= anyObject.justAttr('anyValue', 'data-test') %> >Any text</h1>```
+<h1 <%= anyObject.justAttr('anyValue', 'data-test') %> >Any text</h1>
+```
 
 Подстановка атрибута с колбеком
 ```
-<h1 <%= anyObject.justAttr('anyValue', 'data-test', function(v){return (v+"").replace("a", "G") }) %> >Any text</h1>```
+<h1 <%= anyObject.justAttr('anyValue', 'data-test', function(v){return (v+"").replace("a", "G") }) %> >Any text</h1>
+```
  
 Подстановка атрибута с колбеком и дополнительными данными передаваемыми в колбек
 ```
-<h1 <%= anyObject.justAttr('anyValue', 'data-test', function(v, custom_data){return (v+"").replace("a", "G") }, {custom:'data'}) %> >Any text</h1>```
+<h1 <%= anyObject.justAttr('anyValue', 'data-test', function(v, custom_data){return (v+"").replace("a", "G") }, {custom:'data'}) %> >Any text</h1>
+```
