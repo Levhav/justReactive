@@ -12,7 +12,7 @@ Adding reactive to string templates engine.
 
 # Примеры
 
-Примеры вызова в рамках использования шаблонизатора (JUST.js)[https://github.com/baryshev/just] но данная библиотека может быть использована с любым другим текстовым шаблонизатором.
+Примеры вызова в рамках использования шаблонизатора [JUST.js](https://github.com/baryshev/just) но данная библиотека может быть использована с любым другим текстовым шаблонизатором.
 
 Подстановка без фильтрации
 ```
@@ -51,7 +51,7 @@ Adding reactive to string templates engine.
 
 Подстановка класса если клбек вернул не false
 ```
-<h1 class="<%= anyObject.justClass('anyValue', 'anyClassName', function(v, custom_data){return v && custom_data }, {custom:'data'}) %> " >Any text</h1>
+<h1 class="<%= anyObject.justClass('anyValue', 'anyClassName', function(v, custom_data.custom){return v && custom_data.custom }, {custom:'data'}) %> " >Any text</h1>
 ```
 
 Подстановка класса если знаение false
@@ -61,7 +61,12 @@ Adding reactive to string templates engine.
 
 Подстановка класса если клбек вернул false
 ```
-<h1 class="<%= anyObject.justNotClass('anyValue', 'anyClassName', function(v, custom_data){return v && custom_data }, {custom:'data'}) %> " >Any text</h1>
+<h1 class="<%= anyObject.justClassName('anyValue', function(v, custom_data){return v && custom_data.custom }, {custom:'data'}) %> " >Any text</h1>
+```
+
+Подстановка того что вернул клбек в качестве класса 
+```
+<h1 class="<%= anyObject.justNotClass('anyValue', 'anyClassName', function(v, custom_data.custom){return v + custom_data.custom }, {custom:'data'}) %> " >Any text</h1>
 ```
 
 Подстановка атрибута 
